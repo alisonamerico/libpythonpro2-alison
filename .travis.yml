@@ -8,5 +8,5 @@ install:
 script:
   - poetry run flake8 .
   - poetry run pytest libpythonpro2 --cov=libpythonpro2
-after_install:
+after_success:
   - poetry run codecov
