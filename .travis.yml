@@ -2,9 +2,11 @@ language: python
 python:
   - 3.8
 before_install:
-  - pip install poetry
+  - pip install poetry codecov
 install:
   - poetry install
 script:
   - poetry run flake8 .
-  - poetry run pytest
+  - poetry run pytest libpythonpro2 --cov=libpythonpro2
+after_install:
+  - codecov
