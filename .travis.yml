@@ -7,3 +7,4 @@ install:
   - poetry install
 script:
   - poetry run flake8 .
+  - poetry run pytest
