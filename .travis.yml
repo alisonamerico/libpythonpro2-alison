@@ -4,10 +4,9 @@ python:
 before_install:
   - pip install poetry
 install:
-  - poetry add codecov
   - poetry install
 script:
   - poetry run flake8 .
   - poetry run pytest libpythonpro2 --cov=libpythonpro2
 after_install:
-  - codecov
+  - poetry run codecov
