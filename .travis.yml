@@ -2,8 +2,9 @@ language: python
 python:
   - 3.8
 before_install:
-  - pip install poetry codecov
+  - pip install poetry
 install:
+  - poetry add codecov
   - poetry install
 script:
   - poetry run flake8 .
