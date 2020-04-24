@@ -3,7 +3,7 @@ from libpythonpro2.spam.db import Conexao
 from libpythonpro2.spam.modelos import Usuario
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def conexao():
     # Steup
     conexao_obj = Conexao()
