@@ -1,3 +1,6 @@
+from time import sleep
+
+
 class Sessao:
 
     contador = 0
@@ -19,6 +22,9 @@ class Sessao:
 
 
 class Conexao:
+    def __init__(self):
+        sleep(10)
+
     def gerar_sessao(self):
         return Sessao()
 
